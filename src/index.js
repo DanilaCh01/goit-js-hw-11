@@ -28,9 +28,9 @@ let currentPage = 0;
 let totalImgs;
 const perPage = 40;
 
-form.addEventListener('submit', onSearchFormSbmt);
+form.addEventListener('submit', onSearchFormSubmit);
 
-async function onSearchFormSbmt(evt) {
+async function onSearchFormSubmit(evt) {
   evt.preventDefault();
   input.blur();
   window.scroll({ top: 0 });
@@ -55,7 +55,7 @@ async function onSearchFormSbmt(evt) {
     gallery.innerHTML = '';
     observer.unobserve(target);  
     return;
-    
+
   }
 
   Notify.success(`Hooray! We found ${totalHits} images.`);
