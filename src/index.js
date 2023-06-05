@@ -53,8 +53,9 @@ async function onSearchFormSbmt(evt) {
       'Sorry, there are no images matching your search query. Please try again.'
     );
     gallery.innerHTML = '';
-    observer.unobserve(target);
+    observer.unobserve(target);  
     return;
+    
   }
 
   Notify.success(`Hooray! We found ${totalHits} images.`);
